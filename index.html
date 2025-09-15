@@ -8,6 +8,16 @@
      <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+    <!-- font awesome cdn -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <style>
+        .active{
+            background-color: #FF1F3D;
+            color: white;
+        }
+     </style>
+
 </head>
 <body>
     <header>
@@ -23,18 +33,23 @@
             </div>
         </nav>
     </header>
-    <main class="w-11/12 mx-auto">
+    <main class="w-11/12 mx-auto items-center justify-items-center">
         <nav id="categories-container" class="flex gap-5 justify-center py-8">
            <div>
-                <button class="btn btn-sm bg-[#FF1F3D] text-white">All</button>
+                <button id="btn-all" onclick="videoCategory()" class="btn btn-sm ">All</button>
             </div>
         </nav>
         <!-- videos category -->
-         <div id="videos-container" class="grid grid-cols-4 gap-3 items-center"></div>
-    </main>
+         <div id="videos-container" class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-3 items-center"></div>
+        
 
+         
+
+    </main>
+    
 
     <script src="category.js"></script>
     <script src="videos.js"></script>
+    <script src="videosCategory.js"></script>
 </body>
 </html>
