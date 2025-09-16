@@ -1,4 +1,5 @@
 const videosCategory=(id)=>{
+    loaderInput()
     const url=`https://openapi.programming-hero.com/api/phero-tube/category/${id}`;
     fetch(url)
     .then(res=>res.json())
@@ -22,6 +23,7 @@ function classListRemove(){
     for(let btn of classRemove){
         btn.classList.remove('active')
     }
+    hideLoaderInput();
 }
 
 

@@ -26,7 +26,7 @@
                 <img class="w-[120px]" src="asset/Logo.png" alt="">
             </div>
             <div>
-                <label id="search-input" class="input">
+                <label class="input">
                     <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <g
                         stroke-linejoin="round"
@@ -39,7 +39,7 @@
                         <path d="m21 21-4.3-4.3"></path>
                         </g>
                     </svg>
-                    <input type="search" required placeholder="Search" />
+                    <input id="search-input"  type="search" required placeholder="Search" />
                 </label>
             </div>
             <div >
@@ -53,6 +53,11 @@
                 <button id="btn-all" onclick="videoCategory()" class="btn btn-sm ">All</button>
             </div>
         </nav>
+        <!-- loader section -->
+        <div id="loader" class="py-5 text-center">
+            <span class="loading loading-dots loading-xl "></span>
+        </div>
+
         <!-- videos category -->
          <div id="videos-container" class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-3 items-center"></div>
         
@@ -60,9 +65,9 @@
          
 
     </main>
-
+    <!-- modal section -->
    <dialog id="show_modal" class="modal">
-<div class="modal-box ">
+        <div class="modal-box ">
                 <div id="details_container">
                     <h2 class="text-xl font-bold">${video.title}</h2>
                     <p class="text-base">${video.description}</p>
@@ -73,7 +78,7 @@
                     </form>
                 </div>
             </div>
- </dialog> 
+    </dialog> 
     
 
     <script src="category.js"></script>

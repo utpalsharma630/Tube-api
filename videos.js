@@ -1,5 +1,6 @@
-function videoCategory(){
-    fetch('https://openapi.programming-hero.com/api/phero-tube/videos')
+
+function videoCategory(search = ''){
+    fetch(`https://openapi.programming-hero.com/api/phero-tube/videos?title=${search}`)
     .then(res=> res.json())
     .then(data=>{
         classListRemove()
@@ -7,7 +8,9 @@ function videoCategory(){
         displayVideos(data.videos)}
     )
 }
+
 function displayVideos(videos){
+    loaderInput()
     const videosContiner=document.getElementById('videos-container');
     videosContiner.innerHTML="";
 
@@ -18,6 +21,7 @@ function displayVideos(videos){
             <h2 class="text-2xl font-bold text-[#171717]">Oops!! Sorry, There is no content here</h2>
          </div>
         `
+        hideLoaderInput();
         return;
     }
     
@@ -59,10 +63,11 @@ function displayVideos(videos){
         videosContiner.append(div)
         
     }
+    hideLoaderInput()
 }
 
 
-// videoCategory();
+videoCategory();
 
 // {
 //     "category_id": "1001",
