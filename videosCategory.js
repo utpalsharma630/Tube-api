@@ -23,3 +23,8 @@ function classListRemove(){
         btn.classList.remove('active')
     }
 }
+
+
+
+// details button with modal
+

@@ -46,17 +46,22 @@ function displayVideos(videos){
                         
                         <div>
                             <h2 class="text-base text-[#171717] font-bold">${video.title}</h2>
-                            <p class="flex gap-2 text-sm text-[#17171770]">${video.authors[0].profile_name}<img class="w-5" src="https://img.icons8.com/?size=100&id=98A4yZTt9abw&format=png&color=000000" alt=""></p>
+                            <p class="flex gap-2 text-sm text-[#17171770]">${video.authors[0].profile_name}
+                            ${video.authors[0].verified===true ? '<img class="w-5" src="https://img.icons8.com/?size=100&id=98A4yZTt9abw&format=png&color=000000" alt=""></img>' : ''}</p>
+                            
                             <p class="text-sm text-[#17171770]">${video.others.views}</p>
                         </div>
                     </div> 
                 </div>
+                <button id="showDetails" onclick="detailsBtn('${video.video_id}')" class='btn '>Details</button>
             </div>
         `;
         videosContiner.append(div)
         
     }
 }
+
+
 // videoCategory();
 
 // {
